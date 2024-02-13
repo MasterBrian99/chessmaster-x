@@ -15,3 +15,8 @@ model User {
   email String  @unique 
   password String
 }
+model RevokedToken {
+  id  Int @id @default(autoincrement())
+  jti String @unique
+}
+
