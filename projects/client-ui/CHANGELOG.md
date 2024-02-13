@@ -1,5 +1,11 @@
 # @projects/client-ui
 
+## 0.0.2
+
+### Patch Changes
+
+- 4fcbf55: add login page
+
 ## 0.0.1
 
 ### Patch Changes
