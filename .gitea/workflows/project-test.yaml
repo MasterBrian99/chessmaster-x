@@ -24,6 +24,10 @@ jobs:
         run: pnpm install
       - name: Test all projects
         run: pnpm test
+      - name: Install Docker
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker.io -y
       - name: Set up Docker Buildx
         run: |
           docker build --platform=local -o . git://github.com/docker/buildx
@@ -31,4 +35,4 @@ jobs:
           mv buildx ~/.docker/cli-plugins/docker-buildx
           docker buildx create --use
       - name: Build Docker image
-        run: docker build -t sample-build:latest .
+        run: docker build -t your-image-name:latest .
