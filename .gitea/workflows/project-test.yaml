@@ -24,13 +24,3 @@ jobs:
         run: pnpm install
       - name: Test all projects
         run: pnpm test
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Build Docker Image
-        run:  |
-          apt-get install docker.io -y
-          docker build -t your-image-name:latest .
