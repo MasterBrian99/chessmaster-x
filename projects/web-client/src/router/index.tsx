@@ -1,11 +1,18 @@
+import MainLayout from "@/layout/main/main-layout";
 import SignPage from "@/pages/auth/sign-page";
-import Home from "@/pages/Home";
+import HomePage from "@/pages/home/home-page";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Home />,
+		element: <MainLayout />,
+		children: [
+			{
+				path: "/",
+				element: <HomePage />,
+			},
+		],
 	},
 	{
 		path: "auth",
